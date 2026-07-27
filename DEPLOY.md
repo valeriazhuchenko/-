@@ -65,6 +65,7 @@ git push
 3. Если сборка **Failed** — откройте **Build Logs** и найдите красную строку с ошибкой.
 
 Частые ошибки:
+- **Could not resolve vite.config.js** — на GitHub нет папки `app/client/` или `vite.config.js`. Загрузите ВСЕ файлы проекта (см. `VERCEL_FILES.txt`). Конфиг сборки теперь в корне: `vite.config.js`.
 - **Module not found** — не все файлы в GitHub → сделайте `git push` ещё раз.
 - **Build failed (vite)** — проверьте, что в репозитории есть `app/client/`.
 
