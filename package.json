@@ -8,19 +8,24 @@
     "dev:server": "node --watch app/server/index.js",
     "dev:client": "vite --config app/client/vite.config.js",
     "build": "vite build --config app/client/vite.config.js",
-    "start": "node app/server/index.js"
+    "vercel-build": "npm run build",
+    "start": "node app/server/index.js",
+    "preview": "npm run build && node app/server/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "firebase-admin": "^13.0.2",
-    "node-telegram-bot-api": "^0.66.0"
+    "node-telegram-bot-api": "^0.66.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
     "concurrently": "^9.1.2",
-    "vite": "^6.0.7",
-    "vue": "^3.5.13"
+    "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
